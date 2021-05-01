@@ -3,6 +3,7 @@ import time
 import config
 import os
 
+# Initiates a reddit class using API Access tokens, refer to PRAW documentation on how to see yours
 reddit = praw.Reddit(client_id=os.environ.get('client_id'),
                      client_secret=os.environ.get('client_secret'),
                      user_agent= os.environ.get('user_agent'),
@@ -14,6 +15,7 @@ targetSubreddit = reddit.subreddit("MinecraftEverything")
 week = 0
 
 
+# Posts the submission as distinguished and stickied, requires mod access
 def post_submission(_week):
     _thePost = targetSubreddit.submit(title="[Week " + str(_week) + "] " + config.postTitle,
                                     selftext=config.postDescription)
@@ -29,6 +31,7 @@ def post_submission(_week):
     _thePost.mod.distinguish(how="yes")
 
 
+# Writes contents on the subreddit wiki
 def write_to_wiki():
     page = targetSubreddit.wiki["index"]
     config.wikiContents += "\n\n • [Week " + str(week) + "] " + config.postTitle + " - [Link to the thread](" + config.submissionURL + ")"
