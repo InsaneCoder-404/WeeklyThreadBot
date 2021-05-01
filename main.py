@@ -3,11 +3,11 @@ import time
 import config
 import os
 
-reddit = praw.Reddit(client_id=os.environ['client_id'],
-                     client_secret=os.environ['client_secret'],
+reddit = praw.Reddit(client_id=os.environ.get('client_id'),
+                     client_secret=os.environ.get('client_secret'),
                      user_agent= 'Weekly Threads by /u/EmperorInkei v1.0',
-                     username=os.environ['username'],
-                     password=os.environ['password'])
+                     username=os.environ.get('username'),
+                     password=os.environ.get('password'))
 
 reddit.validate_on_submit = True
 targetSubreddit = reddit.subreddit("MinecraftEverything")
