@@ -3,7 +3,7 @@ import time
 import config
 import os
 
-# Initiates a reddit class using API Access tokens, refer to PRAW documentation on how to see yours
+# Initiates a reddit class using API Access tokens, refer to PRAW documentation on accessing the keys
 reddit = praw.Reddit(client_id=os.environ.get('client_id'),
                      client_secret=os.environ.get('client_secret'),
                      user_agent=os.environ.get('user_agent'),
@@ -11,7 +11,7 @@ reddit = praw.Reddit(client_id=os.environ.get('client_id'),
                      password=os.environ.get('password'))
 
 reddit.validate_on_submit = True
-targetSubreddit = reddit.subreddit("MinecraftEverything")
+targetSubreddit = reddit.subreddit(config.target_subreddit)
 week = 0
 
 
