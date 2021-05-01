@@ -5,7 +5,7 @@ import os
 
 reddit = praw.Reddit(client_id=os.environ['client_id'],
                      client_secret=os.environ['client_secret'],
-                     user_agent=os.environ['user_agent'],
+                     user_agent= 'Weekly_Threads_by_/u/EmperorInkei_v1.0',
                      username=os.environ['username'],
                      password=os.environ['password'])
 
