@@ -39,4 +39,4 @@ def write_to_wiki():
 #     week += 1
 #     post_submission(week)
 #     write_to_wiki()
-print(os.environ.get("username"))
+print(os.environ.get("client_id"))
