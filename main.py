@@ -35,7 +35,8 @@ def write_to_wiki():
     page.edit(config.wikiContents)
 
 
-while True:
-    week += 1
-    post_submission(week)
-    write_to_wiki()
+# while True:
+#     week += 1
+#     post_submission(week)
+#     write_to_wiki()
+print(os.environ.get("username"))
