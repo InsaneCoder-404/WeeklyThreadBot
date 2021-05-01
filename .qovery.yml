@@ -1,0 +1,11 @@
+---
+application:
+  name: "weeklythreadbot"
+  project: "MartialMemes Bot"
+  organization: "QoveryCommunity"
+routers:
+- name: "main-weeklythreadbot"
+  routes:
+  - application_name: "weeklythreadbot"
+    paths:
+    - "/*"
