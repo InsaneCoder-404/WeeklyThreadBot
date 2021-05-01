@@ -1,6 +1,6 @@
 postTitle = "Weekly Questions Megathread"
 postDescription = "**Guidance on your cultivation techniques, advice on your bottleneck, ancient scrolls to read, " \
-                  "or recommendation; You can ask anything on this thread!** " \
+                  "or recommendation; You can ask anything on this thread!**\n" \
                   "#Useful Links:\n\n" \
                   "\n\n#[List of all Weekly Question Threads here](https://www.reddit.com/r/MinecraftEverything/wiki/index)\n\n\n" \
                   "This post was submitted by a bot\n" \

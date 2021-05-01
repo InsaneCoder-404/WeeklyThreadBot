@@ -6,7 +6,7 @@ import os
 # Initiates a reddit class using API Access tokens, refer to PRAW documentation on how to see yours
 reddit = praw.Reddit(client_id=os.environ.get('client_id'),
                      client_secret=os.environ.get('client_secret'),
-                     user_agent= os.environ.get('user_agent'),
+                     user_agent=os.environ.get('user_agent'),
                      username=os.environ.get('username'),
                      password=os.environ.get('password'))
 
