@@ -33,7 +33,7 @@ def post_submission(_week):
 
 # Writes contents on the subreddit wiki
 def write_to_wiki():
-    page = targetSubreddit.wiki["index"]
+    page = targetSubreddit.wiki[config.target_wiki]
     config.wikiContents += "\n\n • [Week " + str(week) + "] " + config.postTitle + " - [Link to the thread](" + config.submissionURL + ")"
     page.edit(config.wikiContents)
 
