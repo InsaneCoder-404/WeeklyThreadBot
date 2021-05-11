@@ -12,12 +12,12 @@ reddit = praw.Reddit(client_id=os.environ.get('client_id'),
 
 reddit.validate_on_submit = True
 targetSubreddit = reddit.subreddit(config.target_subreddit)
-week = 0
+week = 3
 
 
 # Posts the submission as distinguished and stickied, requires mod access
 def post_submission(_week):
-    _thePost = targetSubreddit.submit(title="[Week " + str(_week) + "] " + config.postTitle,
+    _thePost = targetSubreddit.submit(title="[Weekly Thread] " + config.postTitle,
                                     selftext=config.postDescription)
     config.submissionURL = _thePost.permalink
     _thePost.mod.distinguish(how="yes")
@@ -28,7 +28,6 @@ def post_submission(_week):
     _stickiedComment.mod.distinguish(sticky=True, how="yes")
     time.sleep(config.delay)
     _thePost.mod.undistinguish()
-    _thePost.mod.distinguish(how="yes")
 
 
 # Writes contents on the subreddit wiki
