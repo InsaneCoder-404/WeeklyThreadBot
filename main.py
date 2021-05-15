@@ -12,7 +12,7 @@ reddit = praw.Reddit(client_id=os.environ.get('client_id'),
 
 reddit.validate_on_submit = True
 targetSubreddit = reddit.subreddit(config.target_subreddit)
-week = 3
+week = 0
 
 
 # Posts the submission as distinguished and stickied, requires mod access
